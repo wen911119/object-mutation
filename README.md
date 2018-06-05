@@ -53,13 +53,11 @@ mutation(objx).a.b.c.d.e[0].age = 99
 // 报错，因为不能读操作
 console.log(mutation(objx).a.b.c.d.e[0].age)
 // 报错， 有一次读操作
-mutation(objx).a.b.c.d.e[0].age = 
-mutation(objx).a.b.c.d.e[0].age + 1
+mutation(objx).a.b.c.d.e[0].age = mutation(objx).a.b.c.d.e[0].age + 1
 // 报错，++ 也会有一次读取
 mutation(objx).a.b.c.d.e[0].age ++
 ```
 需要读取时，可以在源对象上读取，比如上面的报错例子2可以改为：
 ```javascript
-mutation(objx).a.b.c.d.e[0].age = 
-objx.a.b.c.d.e[0].age + 1
+mutation(objx).a.b.c.d.e[0].age = objx.a.b.c.d.e[0].age + 1
 ```
