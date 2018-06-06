@@ -19,7 +19,7 @@ function createProxy(obj) {
         set: setHandler
       })
     } else {
-      point[property] = { ...point[property] }
+      point[property] = Object.assign({}, point[property])
       point = point[property]
       return new Proxy(target[property], {
         get: getHandler,
