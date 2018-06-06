@@ -1,7 +1,3 @@
-export default function mutation(obj) {
-  return createProxy(obj)
-}
-
 function createProxy(obj) {
   let point = obj
   function setHandler(target, property, value) {
@@ -36,3 +32,9 @@ function createProxy(obj) {
     set: setHandler
   })
 }
+
+function mutation(obj) {
+  return createProxy(obj)
+}
+
+module.exports = mutation

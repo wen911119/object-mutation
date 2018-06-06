@@ -1,6 +1,6 @@
 {
   "name": "object-mutation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "最小化突变一个对象",
   "main": "index.js",
   "scripts": {
